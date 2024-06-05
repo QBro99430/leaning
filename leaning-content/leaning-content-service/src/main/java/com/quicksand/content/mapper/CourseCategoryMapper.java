@@ -1,7 +1,10 @@
 package com.quicksand.content.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.quicksand.content.model.dto.CourseCategoryTreeDto;
 import com.quicksand.content.model.po.CourseCategory;
+
+import java.util.List;
 
 
 /**
@@ -12,5 +15,7 @@ import com.quicksand.content.model.po.CourseCategory;
  * @author quicksand
  */
 public interface CourseCategoryMapper extends BaseMapper<CourseCategory> {
+
+    List<CourseCategoryTreeDto> selectTreeNodes(String id);
 
 }
